@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Day-9</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css" integrity="sha512-hH7VMMVfPgfkpYx2GazOEG6RrYM+y8cS7FzccwBTWQeyhPv01XYk0MVcuhh4EAimOELWvqKjhNwes/UsYoyN6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <style>
+            @media(min-width:300px)
+            {
+                .homepng
+                {
+                    width: 90%;
+                }
+                .abttxt
+                {
+                    top:60%;
+                    left:25%;
+                }
+                .feat
+                {
+                    height: 75%;
+                }
+                .feat1
+                {
+                  left:13%;
+                  top:20%;
+                }
+                .feat2
+                {
+                  top:40%;
+                  left:58%;
+                }
+                .feat3
+                {
+                  top:65%;
+                  left:15%;
+                }
+            }
+            @media(min-width:700px)
+            {
+                .homepng
+                {
+                    width: 40%;
+                }
+                .abttxt
+                {
+                    top:80%;
+                    left:55%;
+                }
+                .feat
+                {
+                    height: 90%;
+                }
+                .featbg
+                {
+                    width: 65%;
+                }
+                .feat1
+                {
+                  left:25%;
+                  top:20%;
+                }
+                .feat2
+                {
+                  top:40%;
+                  left:53%;
+                }
+                .feat3
+                {
+                  top:65%;
+                  left:25%;
+                }
+                
+            }
+            @media(min-width:1100px)
+            {
+                .homepng
+                {
+                    width: 40%;
+                }
+                .abttxt
+                {
+                    top:80%;
+                    left:55%;
+                }
+                .feat
+                {
+                    height: 80%;
+                }
+                .featbg
+                {
+                    width: 40%;
+                }
+                .feat1
+                {
+                  left:35%;
+                  top:20%;
+                }
+                .feat2
+                {
+                  top:40%;
+                  left:53%;
+                }
+                .feat3
+                {
+                  top:65%;
+                  left:35%;
+                }
+                
+            }
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                transition: 0.5s;
+            }
+            .abttxt
+            {
+                backdrop-filter: blur(50px);
+            }
+          
+              .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: rgba(22, 22, 22, 0.99);
+                border-radius: 30px;
+                height: 380px;
+                cursor: pointer;
+                transform-style: preserve-3d !important;
+                perspective: 1000px !important;
+              }
+              .swiper-slide img
+              {
+                transform: translateZ(50px) !important;
+              }
+              .lux
+              {
+                perspective: 1000px;
+                transform-style: preserve-3d !important;
+                cursor: pointer;
+              }
+              .lux img
+              {
+                transform: translateZ(77px) !important;
+              }
+              .lux .fs-3
+              {
+                transform: translateZ(77px) !important;
+
+              }
+              .lux .fs-2
+              {
+                transform: translateZ(77px) !important;
+
+              }
+          
+              .bic{
+                bottom: 0;
+                right:0;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+
+              }
+              .feat
+              {
+                left:50%;
+                top:50%;
+                transform: translate(-50%,-50%);
+              }
+              .filter
+              {
+                cursor: pointer;
+              }
+              .col-lg-1 img:hover
+              {
+                opacity: 100 !important;
+                cursor: pointer;
+              }
+            
+        </style>
+    </head>
+
+    <body class=" bg-black">
+        <header>
+            <nav class=" navbar navbar-expand-md fixed-top navbar-dark bg-black nav-underline">
+                <div class=" container" >
+                    <a href="#" class=" navbar-brand  text-light fs-3 fw-semibold d-flex justify-content-center align-items-center" >
+                        <img src="img/favicon.png" class=" img-fluid px-3"><span>EleCar</span>
+                    </a>
+                    <div id="nav" class=" offcanvas offcanvas-end bg-black navbar-collapse"  data-bs-scroll="true">
+                        <div class=" offcanvas-header w-100 justify-content-end me-4 mt-3">
+                            <button class="btn" data-bs-dismiss="offcanvas" style="border: 1px solid white;">
+                                <i class="bi bi-x-lg" style="color: white !important;"></i>
+                            </button>
+                        </div>
+                        <div class=" offcanvas-body justify-content-start w-100 justify-content-md-center ms-5 ms-md-0">
+                            <div class=" navbar-nav gap-md-3">
+                                <a href="#home" class=" nav-link text-light px-4  mx-1">Home</a>
+                                <a href="#abt" class=" nav-link text-light px-4 mx-1">About</a>
+                                <a href="#ser" class=" nav-link text-light px-4 mx-1">Popular</a>
+                                <a href="#feat" class=" nav-link text-light px-4  mx-1">Featured</a>
+                            </div>
+                        </div>
+                        <div class=" offcanvas-end d-md-none mb-5">
+                            <div class="icons pb-5">
+                                <i class="ri-facebook-fill  text-light justify-content-center  mt-4 p-2 " style="font-size: 17px;border:1px solid white" id="ic"></i>
+                                <i class="ri-youtube-fill   text-light justify-content-center  mt-4 p-2 mx-4"  style="font-size: 17px;border:1px solid white" id="ic"></i>
+                                <i class="ri-instagram-fill  text-light justify-content-center  mt-4 p-2"  style="font-size: 17px;border:1px solid white" id="ic"></i>
+                                <i class="ri-twitter-fill  text-light justify-content-center  mt-4 p-2 mx-4" style="font-size: 17px;border:1px solid white" id="ic"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button class=" navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#nav">
+                        <span class=" navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main class=" container  d-flex justify-content-center align-content-center flex-column">
+            <section class="row d-flex justify-content-center align-content-center row-gap-lg-2  row-gap-md-4 row-gap-0 text-light my-5 mt-lg-1 mb-5" style="min-height: 100vh;font-family: 'Exo', serif;">
+                <div class="col-12 display-5 text-center fw-medium mt-5 txt1">Choose The Best Car</div>
+                <div class="col-12 fs-3 text-center fw-medium txt2">Porsche Mission E</div>
+                <div class="col-12 fs-5 text-light-emphasis text-center fw-medium txt3"><i class="bi bi-lightning-charge-fill  mx-1" style="color: rgb(0, 119, 255);"></i>Electric  Vechile</div>
+                <div class="col-12 d-flex justify-content-center my-5 my-lg-4">
+                    <img src="img/home.png" class=" img img-fluid homepng">
+                </div>
+                <div class="col-12 d-flex justify-content-center mt-3 mt-lg-2">
+                    <div class="col-md-2 col-4 text-center hero1">
+                        <div class="mb-3"> <i class="bi bi-thermometer-half bg-dark rounded-3 p-2 px-3 fs-5"></i></div>
+                        <div class="fs-5">24<sup>o</sup></div>
+                        <div class=" text-light-emphasis">Temperature</div>
+                    </div>
+                    <div class="col-md-2 col-4  text-center hero2">
+                        <div class="mb-3"> <i class="bi bi-speedometer  bg-dark rounded-3 p-2 px-3 fs-5"></i></div>                       
+                        <div  class="fs-5" >873</div>
+                        <div class=" text-light-emphasis">Milage</div>
+                    </div>
+                    <div class="col-md-2 col-4  text-center hero3">
+                        <div class="mb-3"><i class="bi bi-lightning-charge-fill  bg-dark rounded-3 p-2 px-3 fs-5"></i></div>
+                        <div  class="fs-5">94%</div>
+                        <div class=" text-light-emphasis">Battery</div>
+                    </div>
+                </div>
+            </section>
+            <section class=" row my-5 d-flex justify-content-evenly">
+                <div class="col-lg-6 col-10 position-relative d-flex justify-content-center abt1">
+                    <img src="img/about.png" class=" img img-fluid rounded-4">
+                    <div class=" text-center p-4 px-5 border position-absolute rounded-5 abttxt">
+                        <div class=" fs-3 fw-bold text-light">2500+</div>
+                        <div class=" text-light mx-lg-3">Supercharges Placed along Popular routes</div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-10 d-flex flex-column mt-4 mt-md-0">
+                    <div class=" fs-2 fw-semibold text-light mt-5 a1">Machines With<br> Future Technology</div>
+                    <div class=" text-light-emphasis my-4 a2">See The Future With High-performance Electric Cars Produced by Recommed Brands . They Feauture Futuristic builds and designs with new and innovative platforms that last a long time</div>
+                    <div><button class=" btn btn-primary  px-3 a3">Know More</button></div>
+                </div>
+            </section>
+            <section class="row my-5 d-flex flex-column align-items-center">
+                <div class="col-12 text-center my-5">
+                    <div class=" fs-2 text-light fw-semibold my-5 chtxt">Choose Your Electric Car <br>Of The Porsche Brand</div>
+                </div>
+                <div class="col-md-10 col-12">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper ss1">
+                          <div class="swiper-slide text-light d-flex flex-column text-start ps-5 position-relative ss1">
+                            <div class=" fs-3 fw-semibold mt-4">Porsche</div>
+                            <div class=" text-light-emphasis">Turbo S</div>
+                            <div class=" d-flex justify-content-center my-4"><img src="img/featured1.png" class=" img img-fluid w-75"></div>
+                            <div class=" d-flex">
+                                <div><i class="bi bi-clock me-2"></i>3.7Sec</div><div class=" ms-4"><i class="bi bi-graph-up-arrow me-2"></i>356 Km/h</div>
+                            </div>
+                            <div class=" mt-1">Electric</div>
+                            <div class=" fs-5 fw-semibold my-3"><i class="bi bi-ev-station me-2"></i>$165,205</div>
+                            <div class=" bg-primary p-3 position-absolute bic"><i class="bi bi-bag-plus-fill"></i></div>
+                        </div>
+                        <div class="swiper-slide text-light d-flex flex-column text-start ps-5 position-relative ss2">
+                            <div class=" fs-3 fw-semibold mt-4">Porsche</div>
+                            <div class=" text-light-emphasis">Turbo S</div>
+                            <div class=" d-flex justify-content-center my-4"><img src="img/featured2.png" class=" img img-fluid w-75"></div>
+                            <div class=" d-flex">
+                                <div><i class="bi bi-clock me-2"></i>3.7Sec</div><div class=" ms-4"><i class="bi bi-graph-up-arrow me-2"></i>356 Km/h</div>
+                            </div>
+                            <div class=" mt-1">Electric</div>
+                            <div class=" fs-5 fw-semibold my-3"><i class="bi bi-ev-station me-2"></i>$165,205</div>
+                            <div class=" bg-primary p-3 position-absolute bic"><i class="bi bi-bag-plus-fill"></i></div>
+                        </div>
+                        <div class="swiper-slide text-light d-flex flex-column text-start ps-5 position-relative ss3">
+                            <div class=" fs-3 fw-semibold mt-4">Porsche</div>
+                            <div class=" text-light-emphasis">Turbo S</div>
+                            <div class=" d-flex justify-content-center my-4"><img src="img/featured3.png" class=" img img-fluid w-75"></div>
+                            <div class=" d-flex">
+                                <div><i class="bi bi-clock me-2"></i>3.7Sec</div><div class=" ms-4"><i class="bi bi-graph-up-arrow me-2"></i>356 Km/h</div>
+                            </div>
+                            <div class=" mt-1">Electric</div>
+                            <div class=" fs-5 fw-semibold my-3"><i class="bi bi-ev-station me-2"></i>$165,205</div>
+                            <div class=" bg-primary p-3 position-absolute bic"><i class="bi bi-bag-plus-fill"></i></div>
+                        </div>
+                        <div class="swiper-slide text-light d-flex flex-column text-start ps-5 position-relative">
+                            <div class=" fs-3 fw-semibold mt-4">Porsche</div>
+                            <div class=" text-light-emphasis">Turbo S</div>
+                            <div class=" d-flex justify-content-center my-4"><img src="img/featured4.png" class=" img img-fluid w-75"></div>
+                            <div class=" d-flex">
+                                <div><i class="bi bi-clock me-2"></i>3.7Sec</div><div class=" ms-4"><i class="bi bi-graph-up-arrow me-2"></i>356 Km/h</div>
+                            </div>
+                            <div class=" mt-1">Electric</div>
+                            <div class=" fs-5 fw-semibold my-3"><i class="bi bi-ev-station me-2"></i>$165,205</div>
+                            <div class=" bg-primary p-3 position-absolute bic"><i class="bi bi-bag-plus-fill"></i></div>
+                        </div>
+                        <div class="swiper-slide text-light d-flex flex-column text-start ps-5 position-relative">
+                            <div class=" fs-3 fw-semibold mt-4">Porsche</div>
+                            <div class=" text-light-emphasis">Turbo S</div>
+                            <div class=" d-flex justify-content-center my-4"><img src="img/featured5.png" class=" img img-fluid w-75"></div>
+                            <div class=" d-flex">
+                                <div><i class="bi bi-clock me-2"></i>3.7Sec</div><div class=" ms-4"><i class="bi bi-graph-up-arrow me-2"></i>356 Km/h</div>
+                            </div>
+                            <div class=" mt-1">Electric</div>
+                            <div class=" fs-5 fw-semibold my-3"><i class="bi bi-ev-station me-2"></i>$165,205</div>
+                            <div class=" bg-primary p-3 position-absolute bic"><i class="bi bi-bag-plus-fill"></i></div>
+                        </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+            </section>
+            <section class=" row mt-5 d-flex flex-column align-items-center">
+                <div class="col-12 text-center my-5">
+                    <div class=" display-5 fw-semibold text-light mf">More Features</div>
+                </div>
+                <div class="col-12 position-relative d-flex justify-content-center">
+                    <img src="img/map.svg" class=" featbg img img-fluid">
+                    <img src="img/features.png" class=" position-absolute feat img img-fluid">
+                    <div class=" d-flex flex-column p-3 px-5 rounded-4 position-absolute feat1 text-center" style="backdrop-filter: blur(10px);  border: 1px solid rgba(255, 255, 255, 0.125); background-color: rgba(255, 255, 255, 0.16);">
+                        <div class=" fs-2 text-semibold text-light">800V</div>
+                        <div class=" text-light">Turbo</div>
+                        <div  class=" text-light">Charging</div>
+                    </div>
+                    <div class=" d-flex flex-column p-3 px-5 rounded-4 position-absolute feat2 text-center" style="backdrop-filter: blur(10px);  border: 1px solid rgba(255, 255, 255, 0.125); background-color: rgba(255, 255, 255, 0.16);">
+                        <div class=" fs-2 text-semibold text-light">350</div>
+                        <div class=" text-light">Km</div>
+                        <div  class=" text-light">Range</div>
+                    </div>
+                    <div class=" d-flex flex-column p-3 px-5 rounded-4 position-absolute feat3 text-center" style="backdrop-filter: blur(10px);  border: 1px solid rgba(255, 255, 255, 0.125); background-color: rgba(255, 255, 255, 0.16);">
+                        <div class=" fs-2 text-semibold text-light">480</div>
+                        <div class=" text-light">Km</div>
+                        <div  class=" text-light">Travel</div>
+                    </div>
+                </div>
+            </section>
+            <section class="row d-flex justify-content-center">
+                <div class="col-12 text-center">
+                    <div class=" display-5 fw-semibold  text-light">Featured Luxury Cars</div>
+                </div>
+                <div class="col-lg-5 col-md-8 col-11 d-flex justify-content-evenly my-5">
+                    <div  class="p-3 rounded-4 d-flex align-items-center text-light px-4 ft1" style="background-color:rgba(34, 34, 34, 0.586)" ><div id="All"  class="filter">All</div></div>
+                    <div   class="p-3 rounded-4 d-flex align-items-center ft2" style="background-color:rgba(34, 34, 34, 0.586)"><img src="img/logo1.png" style="width:28px;"  class="filter" id="Porsche" ></div>
+                    <div class="p-3 rounded-4  d-flex align-items-center ft3" style="background-color:rgba(34, 34, 34, 0.586)" ><img src="img/logo2.png" style="width:28px"  class="filter" id="Audi"></div>
+                    <div class="p-3 rounded-4  d-flex align-items-center ft4" style="background-color:rgba(34, 34, 34, 0.586)" ><img src="img/logo3.png" style="width:28px"  class="filter" id="Tesla"></div>
+                </div>
+                <div class="col-md-10 my-5 row d-flex justify-content-evenly row-gap-5">
+                    <div class="col-lg-3 col-md-5 col-10 p-5 rounded-4 d-flex flex-column row-gap-2 position-relative me-lg-3 lux lux1" style="background-color: rgb(12, 12, 12);" data-item="Tesla">
+                        <div class="fs-2 text-light">Tesla</div>
+                        <div class=" fs-5">Model X</div>
+                        <img src="img/featured1.png" class="img img-fluid my-2">
+                        <div class=" fs-3 text-light">$33,198</div>
+                        <div class=" bg-primary p-3 position-absolute bic text-light"><i class="bi bi-bag-plus-fill"></i></div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-10 p-5 rounded-4 d-flex flex-column row-gap-2 position-relative mx-lg-5 lux lux2" style="background-color: rgb(12, 12, 12);" data-item="Tesla">
+                        <div class="fs-2 text-light">Tesla</div>
+                        <div class=" fs-5">Model 3</div>
+                        <img src="img/featured2.png" class="img img-fluid my-2">
+                        <div class=" fs-3 text-light">$93,440</div>
+                        <div class=" bg-primary p-3 position-absolute bic text-light"><i class="bi bi-bag-plus-fill"></i></div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-10 p-5 rounded-4 d-flex flex-column row-gap-2 position-relative ms-md-3 lux lux3" style="background-color: rgb(12, 12, 12);" data-item="Audi">
+                        <div class="fs-2 text-light">Audi</div>
+                        <div class=" fs-5">E-tron</div>
+                        <img src="img/featured1.png" class="img img-fluid my-2">
+                        <div class=" fs-3 text-light">$16,052</div>
+                        <div class=" bg-primary p-3 position-absolute bic text-light"><i class="bi bi-bag-plus-fill"></i></div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-10 p-5 rounded-4 d-flex flex-column row-gap-2 position-relative me-lg-3 lux lux4" style="background-color: rgb(12, 12, 12);" data-item="Porsche">
+                        <div class="fs-2 text-light">Porsche</div>
+                        <div class=" fs-5">Boxster 987</div>
+                        <img src="img/featured4.png" class="img img-fluid my-2">
+                        <div class=" fs-3 text-light">$93,604</div>
+                        <div class=" bg-primary p-3 position-absolute bic text-light"><i class="bi bi-bag-plus-fill"></i></div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-10 p-5 rounded-4 d-flex flex-column row-gap-2 position-relative mx-md-5 lux lux5" style="background-color: rgb(12, 12, 12);" data-item="Porsche">
+                        <div class="fs-2 text-light">Porsche</div>
+                        <div class=" fs-5">Panamera</div>
+                        <img src="img/featured5.png" class="img img-fluid my-2">
+                        <div class=" fs-3 text-light">$19,160</div>
+                        <div class=" bg-primary p-3 position-absolute bic text-light"><i class="bi bi-bag-plus-fill"></i></div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <section class=" row d-flex py-5 container-fluid justify-content-evenly" style="background-image: url('img/offer-bg.png');width:100vw !important;background-size:cover;background-position:center;">
+            <div class="col-lg-4 my-5 col-md-6 col-10">
+                <div class=" fs-2 fw-semibold text-light off1 mx-md-3 mx-0">Do You Want To Recive Special Offers ?</div>
+                <div class=" fs-5 text-light-emphasis my-4 off2">Be The First To Recive All The Information about our Products and New Cars By Email By Subscribing To Our Mail List</div>
+                <div><button class=" btn btn-primary fs-5 px-4 py-2 off3">Subscribe Now</button></div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-10 d-flex align-items-center">
+                <img src="img/offer.png" class=" img img-fluid off4">
+            </div>
+        </section>
+        <section class=" container my-5">
+            <div class="row d-flex justify-content-evenly my-5 py-5 row-gap-5 column-gap-4">
+                <div class="col-lg-1 col-md-3 col-4 fl1">
+                    <img src="img/logo1.png" class=" img img-fluid opacity-50">
+                </div>
+                <div class="col-lg-1 d-flex align-items-center col-md-3 col-4 fl2">
+                    <img src="img/logo2.png" class=" img img-fluid opacity-50">
+                </div>
+                <div class="col-lg-1 col-md-3 col-4 fl3">
+                    <img src="img/logo3.png" class=" img img-fluid opacity-50">
+                </div>
+                <div class="col-lg-1 col-md-3 col-4 fl4">
+                    <img src="img/logo4.png" class=" img img-fluid opacity-50">
+                </div>
+                <div class="col-lg-1 col-md-3 col-4 fl5">
+                    <img src="img/logo5.png" class=" img img-fluid opacity-50">
+                </div>
+                <div class="col-lg-1 col-md-3 col-4 fl6">
+                    <img src="img/logo6.png" class=" img img-fluid opacity-50">
+                </div>
+            </div>
+            
+        </section>
+        <footer class="my-5 py-5 container">
+            <div class="row my-5 d-flex justify-content-md-evenly justify-content-center row-gap-5 column-gap-4">
+                <div class="col-lg-3 col-md-6 col-10 ft1">
+                    <div class=" d-flex fs-3 text-light fw-semibold">
+                        <img src="img/favicon.png" class=" img img-fluid me-3">
+                        <div>EleCar</div>
+                    </div>
+                    <div class=" text-light-emphasis mt-3 fs-5">We Offers The Best Electric Cars of the most reconginzable brands in the world</div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-10 text-light-emphasis fs-4 d-flex row-gap-2 flex-column text-md-start text-center ft2">
+                    <div class=" text-light fw-semibold fs-4">Company</div>
+                    <div class="fs-5">About</div>
+                    <div  class="fs-5">Cars</div>
+                    <div  class="fs-5">History</div>
+                    <div  class="fs-5">Shop</div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-10 text-light-emphasis fs-4 d-flex row-gap-2 flex-column text-md-start text-center ft3">
+                    <div class=" text-light fw-semibold fs-4">Information</div>
+                    <div class="fs-5">Request a Quote</div>
+                    <div  class="fs-5">Find a Dealer</div>
+                    <div  class="fs-5">Contact Us</div>
+                    <div  class="fs-5">Services</div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-10 text-light-emphasis fs-4 d-flex row-gap-2 flex-column justify-content-center justify-content-md-start ft4">
+                    <div class=" text-light fw-semibold fs-4  text-md-start text-center">Follow Us</div>
+                   <div class=" d-flex column-gap-4 justify-content-md-start justify-content-center">
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                   </div>
+                </div>
+            </div>
+        </footer>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            let filter=document.querySelectorAll(".filter")
+            const sr = ScrollReveal({
+                distance: '100px',
+                opacity: 0,
+                duration: 1000,
+                easing: 'ease-in-out',
+                reset: true,
+                afterReveal: function(el) {
+                    el.style.transform = '';  
+                }
+            });
+            
+            sr.reveal('.txt1', { origin: 'top', delay: 700 });
+
+            sr.reveal('.txt2', { origin: 'top', delay: 1000 });
+            sr.reveal('.txt3', { origin: 'top', delay: 1300 });
+            sr.reveal('.homepng', { origin: 'top', delay: 1600 });
+            sr.reveal('.chtxt', { origin: 'top', delay: 700 ,distance:"50px",});
+
+            
+            sr.reveal('.hero1', { distance: '50%', origin: 'left', delay: 1900 });
+            sr.reveal('.hero2', { distance: '150%', origin: 'left', duration: 1700, delay: 2100 });
+            sr.reveal('.hero3', { distance: '220%', origin: 'left', duration: 1800, delay: 2400 });
+            
+            sr.reveal('.abt1', { distance: '40%', origin: 'left', duration: 1600, delay: 800 });
+            sr.reveal('.abttxt', { distance: '80%', origin: 'left', duration: 1600, delay: 1500 });
+            
+            sr.reveal('.a1', { distance: '40%', origin: 'right', duration: 1600, delay: 2000 });
+            sr.reveal('.a2', { distance: '40%', origin: 'right', duration: 1600, delay: 2600 });
+            sr.reveal('.a3', { distance: '70%', origin: 'right', duration: 1600, delay: 3200 });
+
+            sr.reveal('.ss1', { distance: '20%', origin: 'left', duration: 1000, delay: 800 });
+         
+            
+            sr.reveal('.mf', { distance: '40%', origin: 'top', duration: 1200, delay: 100 });
+            sr.reveal('.featbg', {distance:'0px' ,duration: 1200, delay: 300 });
+            sr.reveal('.feat', { distance: '20%', origin: 'top', duration: 1200, delay: 500 });
+            sr.reveal('.feat1', { distance: '20%', origin: 'top', duration: 1200, delay: 700 });
+            sr.reveal('.feat2', { distance: '20%', origin: 'top', duration: 1200, delay: 900 });
+            sr.reveal('.feat3', { distance: '20%', origin: 'top', duration: 1200, delay: 1100 });
+
+            sr.reveal('.ft1', { distance: '40%', origin: 'top', duration: 700, delay: 700 });
+            sr.reveal('.ft2', { distance: '40%', origin: 'top', duration: 700, delay: 1000 });
+            sr.reveal('.ft3', { distance: '40%', origin: 'top', duration: 700, delay: 1300 });
+            sr.reveal('.ft4', { distance: '40%', origin: 'top', duration: 700, delay: 1500 });
+
+            sr.reveal('.lux', { distance: '30%', origin: 'top', duration: 800, delay: 500 });
+
+            
+            sr.reveal('.off1', { distance: '40%', origin: 'left', duration: 800, delay: 700 });
+            sr.reveal('.off2', { distance: '40%', origin: 'left', duration: 800, delay: 1100 });
+            sr.reveal('.off3', { distance: '40%', origin: 'left', duration: 800, delay: 1400 });
+            sr.reveal('.off4', { distance: '40%', origin: 'right', duration: 800, delay: 1700 });
+
+            sr.reveal('.fl1', { distance: '70%', origin: 'top', duration: 1000, delay: 600 });
+            sr.reveal('.fl2', { distance: '70%', origin: 'top', duration: 1000, delay: 800 });
+            sr.reveal('.fl3', { distance: '70%', origin: 'top', duration: 1000, delay: 1000 });
+            sr.reveal('.fl4', { distance: '70%', origin: 'top', duration: 1000, delay: 1200 });
+            sr.reveal('.fl5', { distance: '70%', origin: 'top', duration: 1000, delay: 1400 });
+            sr.reveal('.fl6', { distance: '70%', origin: 'top', duration: 1000, delay: 1600 });
+    
+            sr.reveal('.ft1', { distance: '70%', origin: 'top', duration: 1000, delay: 600 });
+            sr.reveal('.ft2', { distance: '70%', origin: 'top', duration: 1000, delay: 800 });
+            sr.reveal('.ft3', { distance: '70%', origin: 'top', duration: 1000, delay: 1000 });
+            sr.reveal('.ft4', { distance: '70%', origin: 'top', duration: 1000, delay: 1200 });
+            var swiper = new Swiper(".mySwiper", {
+                    loop:true,
+                    watchslideprogress:true,
+                    speed:2000,
+                    spaceBetween: 80,
+                    autoplay:{
+                        delay:8000,
+                     pauseOnMouseEnter: true,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        },
+                        breakpoints: {
+                            220: {
+                              slidesPerView: 1,
+                            },
+                            700: {
+                              slidesPerView: 1.6,
+                            },
+                            1280: {
+                              slidesPerView: 3,
+                            }
+                        }
+                    });
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                setTimeout(() => {
+                                    swiper.params.autoplay.delay = 2000;
+                                    swiper.params.pauseOnMouseEnter=true;
+                                    swiper.autoplay.start();
+                                  }, 8000);
+                            } else {
+                                swiper.autoplay.stop();
+                            }
+                        });
+                    }, { threshold: 0.5 }); 
+                    
+                
+                    const sliderSection = document.querySelector(".swiper-slide");
+                    if (sliderSection) {
+                        observer.observe(sliderSection);
+                    }
+                      
+                      VanillaTilt.init(document.querySelectorAll(".swiper-slide"), {
+                        max: 35,
+                        speed: 400,
+                        perspective:900,
+                        glare:true,
+                        "max-glare":0.7,
+                    })
+                    VanillaTilt.init(document.querySelectorAll(".lux"), {
+                        max: 35,
+                        speed: 400,
+                        perspective:900,
+                        glare:true,
+                        "max-glare":0.7,
+                    })
+                    let pro=document.querySelectorAll(".lux")
+                    filter.forEach((fil)=>{
+                        fil.addEventListener("click",(event)=>{
+                            filter.forEach((fil)=>{
+                                fil.parentElement.style.backgroundColor="rgba(34, 34, 34, 0.586)"
+                            })
+                            event.target.parentElement.style.backgroundColor="rgb(13,110,253)"
+                            let search=event.target.id;
+                            if(search=="All")
+                            {
+                                pro.forEach((pd)=>{
+                                    pd.classList.remove("d-none")
+                                })
+                            }
+                            else
+                            {
+                            pro.forEach((pd)=>{
+                                if(search=="All")
+                                {
+                                    pd.classList.remove("d-none")
+                                }
+                                if(pd.dataset.item.includes(search))
+                                {
+                                    pd.classList.remove("d-none")
+                                }
+                                else
+                                {
+                                    pd.classList.add("d-none")
+                                }
+                            })
+                        }
+                        })
+                    })
+
+                     
+                
+        </script>
+        
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
