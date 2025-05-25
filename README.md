@@ -1,7 +1,5 @@
 # EleCar - Electric Car Showcase
 
-![EleCar Logo](img/favicon.png)
-
 EleCar is a modern, responsive website showcasing premium electric vehicles from top brands like Porsche, Tesla, and Audi. This project features stunning 3D effects, smooth animations, and an intuitive user interface.
 
 ## Features
